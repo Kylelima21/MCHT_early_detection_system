@@ -1,5 +1,6 @@
-/* Set core root defaults */
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/* || ROOT DEFAULTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 :root {
   --clr-base-blue: rgb(146, 206, 208, 1);
@@ -9,7 +10,12 @@
   --clr-opaque-green: rgb(85, 143, 94, 0.7);
   --clr-opaque-purple: rgba(13, 4, 42, 0.7);
 
-  --clr-body-boxes: rgba(122, 154, 157, 0.6);
+  --clr-body-boxes: rgb(211, 233, 237, 0.8);
+  
+  --clr-mcht-titles: black;
+  --clr-mcht-darblu-bg: rgba(0, 76, 134, 0.9);
+  --clr-mcht-ligblu: rgb(211, 233, 237);
+  --clr-mcht-whi: rgb(255, 250, 255, 0.8);
 }
 
 * {
@@ -41,7 +47,7 @@ a:focus {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-image: url("email_alerts/www/img/acad_back.jpg");
+  background-image: url("email_alerts/www/img/biddoo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -64,7 +70,7 @@ ol[role="list"] {
   left: 1%;
   align-items: center;
   justify-content: left;
-  color: white;
+  color: var(--clr-mcht-titles);
 }
 
 .body-titles {
@@ -96,7 +102,7 @@ ol[role="list"] {
   position: relative;
   text-align: center; 
   margin: 15px 0 25vh 0;
-  background-color: var(--clr-opaque-purple);
+  background-color: var(--clr-mcht-darblu-bg);
   border-radius: 1rem;
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
 }
@@ -121,6 +127,33 @@ ol[role="list"] {
   font-weight: 500;
   margin-bottom: 10px;
 }
+
+
+
+
+
+
+/* || SCROLL TO TOP BUTTON */
+
+.scrolltotop {
+  right: 1.5rem; 
+  bottom: 1.5rem; 
+  width: 3.5rem;
+  position: fixed;
+}
+
+.sttan {
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 100px 200px;
+}
+
+@keyframes fade-in {
+  to {opacity: 1;}
+}
+
+
 
 
 
@@ -154,7 +187,7 @@ ol[role="list"] {
   margin: 20px auto;
   padding: 20px;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--clr-mcht-whi);
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
   color: black;
   font-size: 18px;
