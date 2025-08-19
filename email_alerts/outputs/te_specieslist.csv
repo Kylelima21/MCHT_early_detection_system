@@ -1,2 +1,4 @@
-"scientific.name","common.name","observed.on","location","listing.status","latitude","longitude","url","preserve"
-"Falco peregrinus","peregrine falcon",2025-07-27,"04652, Trescott Twp US-ME 44.72972, -67.10036","state endangered",44.729722,-67.100359,"https://ebird.org/checklist/S263152047","Bog Brook Cove Preserve"
+"scientific.name","common.name","observed.on","location","listing.status","latitude","longitude","url","preserve","polygonloc"
+"Falco peregrinus","peregrine falcon",2025-08-13,"Mt Desert, ME, USA","state endangered",44.3105313889,-68.3168713889,"https://www.inaturalist.org/observations/307266330","Echo Vista","buffer"
+"Falco peregrinus","peregrine falcon",2025-08-13,"Mt Desert, ME, USA","state endangered",44.3105313889,-68.3168713889,"https://www.inaturalist.org/observations/307266330","Norumbega Mountain Preserve","buffer"
+"Falco peregrinus","peregrine falcon",2025-08-13,"Mt Desert, ME, USA","state endangered",44.3105313889,-68.3168713889,"https://www.inaturalist.org/observations/307266330","Acadia Mountain Preserve","buffer"
