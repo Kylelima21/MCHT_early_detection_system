@@ -146,8 +146,8 @@ inat_recent <- function(place_id, timespan) {
   
   
   # Select records inside the designated area
-  filtered <- filter_to_geobounds(inat_obs, locname, lat = "latitude", long = "longitude")
-  buffered <- filter_to_buffer(inat_obs, locname, lat = "latitude", long = "longitude")
+  filtered <- filter_to_geobounds(inat_obs, lat = "latitude", long = "longitude")
+  buffered <- filter_to_buffer(inat_obs, lat = "latitude", long = "longitude")
   
   combined <- bind_rows(filtered, buffered)
   
@@ -275,7 +275,7 @@ combine_citsci_data <- function(x, y, join) {
 #'
 #' @export
 
-filter_to_geobounds <- function(dat, park, lat, long) {
+filter_to_geobounds <- function(dat, lat, long) {
   
   
   sf::sf_use_s2(FALSE)
@@ -340,7 +340,7 @@ filter_to_geobounds <- function(dat, park, lat, long) {
 #'
 #' @export
 
-filter_to_buffer <- function(dat, park, lat, long) {
+filter_to_buffer <- function(dat, lat, long) {
   
   
   sf::sf_use_s2(FALSE)
