@@ -8,7 +8,6 @@
 library(blastula)
 
 
-
 #------------------------------------------------#
 ####         Create and send email            ####
 #------------------------------------------------#
@@ -17,27 +16,11 @@ library(blastula)
 # my_email_object <- render_email('outputs/emailtest.Rmd')
 # print(my_email_object)
 
-
-## Create the credentials key needed to send from my email
-# create_smtp_creds_key(
-#   id = "kmail",
-#   user = "klima@schoodicinstitute.org",
-#   provider = "gmail",
-#   #overwrite = TRUE
-# )
-
-# create_smtp_creds_file(
-#   file = "kmail",
-#   user = "klima@schoodicinstitute.org",
-#   provider = "gmail"
-# )
-
-
 ## Produce and send the email
 smtp_send(render_email('email_alerts/email_material.Rmd'), 
           from = "klima@schoodicinstitute.org", 
           to = c("klima@schoodicinstitute.org"),
-          subject = "Acadia National Park Citizen Science Report", 
+          subject = "Weekly early detection report", 
           credentials = creds_file("email_alerts/kmail")
 )
 
