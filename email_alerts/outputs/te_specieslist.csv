@@ -1,4 +1,2 @@
 "scientific.name","common.name","observed.on","location","listing.status","latitude","longitude","url","preserve","polygonloc"
-"Falco peregrinus","peregrine falcon",2025-08-13,"Mt Desert, ME, USA","state endangered",44.3105313889,-68.3168713889,"https://www.inaturalist.org/observations/307266330","Echo Vista","buffer"
-"Falco peregrinus","peregrine falcon",2025-08-13,"Mt Desert, ME, USA","state endangered",44.3105313889,-68.3168713889,"https://www.inaturalist.org/observations/307266330","Norumbega Mountain Preserve","buffer"
-"Falco peregrinus","peregrine falcon",2025-08-13,"Mt Desert, ME, USA","state endangered",44.3105313889,-68.3168713889,"https://www.inaturalist.org/observations/307266330","Acadia Mountain Preserve","buffer"
+"Sterna paradisaea","arctic tern",2025-08-25,"Harriman Point Preserve (MCHT)","state threatened",44.2953397,-68.5351896,"https://ebird.org/checklist/S269425415","Harriman Point Preserve","preserve"
