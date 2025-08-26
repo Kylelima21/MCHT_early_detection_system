@@ -231,8 +231,8 @@ if (nrow(te) > 0) {
   <div>
   <h3 class = "boxtitles"> Buffer Zone Species </h3>
   </div>
-  <img src = "email_alerts/www/img/hwa.jpeg" role = "img" aria-label = "A Hemlock tree infested with Hemlock Woolly Adelgid" class = "inv-img">
-  <h5 class = "cite"> © Jesse Wheeler </h5>
+  <img src = "email_alerts/www/img/bld.png" role = "img" aria-label = "American beech leaves with beech leaf disease" class = "inv-img">
+  <h5 class = "cite"> © Kyle Lima </h5>
   <div class = "sp-table shrink-table">
 ```{r buffer-table, results = 'asis', echo = FALSE}
 bufftab <- pests %>%

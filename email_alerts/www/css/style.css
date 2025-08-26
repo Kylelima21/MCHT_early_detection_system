@@ -441,8 +441,9 @@ p {
 
 .footer-box p {
   margin-bottom: 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 2.5rem;
+  color: black;
 }
 
 .footer-box a {
