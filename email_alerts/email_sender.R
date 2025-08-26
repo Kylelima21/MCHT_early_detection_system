@@ -19,7 +19,9 @@ library(blastula)
 ## Produce and send the email
 smtp_send(render_email('email_alerts/email_material.Rmd'), 
           from = "klima@schoodicinstitute.org", 
-          to = c("klima@schoodicinstitute.org"),
+          to = c("klima@schoodicinstitute.org",
+                 "adeci@mcht.org",
+                 "therrick@mcht.org"),
           subject = "Weekly early detection report", 
           credentials = creds_file("email_alerts/kmail")
 )
