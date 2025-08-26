@@ -151,7 +151,7 @@ inat_recent <- function(place_id, timespan) {
   
   combined <- bind_rows(filtered, buffered)
   
-  if(length(filtered) >= 1) {
+  if(length(combined) >= 1) {
     message("Data retrieval successful!")
   } else {
     stop("There are no recent iNatuarlist records within the bounds.")
