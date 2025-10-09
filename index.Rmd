@@ -61,23 +61,45 @@ watchlist_species(final_data, "email_alerts/outputs")
 ## Read in the outputs from the watchlist species functions and format for tables
 ## Removing buffer zone spp for rare and te species
 pests <- process_species("email_alerts/outputs/invasive_pestslist.csv")
-rare <- process_species("email_alerts/outputs/rare_specieslist.csv") %>% 
-  filter(polygonloc == "preserve") %>% 
+rare <- process_species("email_alerts/outputs/rare_specieslist.csv") %>%
+  filter(polygonloc == "preserve") %>%
   select(-c(polygonloc))
-te <- process_species("email_alerts/outputs/te_specieslist.csv", extra_cols = "listing.status") %>% 
-  filter(polygonloc == "preserve") %>% 
+te <- process_species("email_alerts/outputs/te_specieslist.csv",
+                      extra_cols = "listing.status") %>%
+  filter(polygonloc == "preserve") %>%
   select(-c(polygonloc))
+
+
+## Add new records to the database
+records <- bind_rows(
+  if(nrow(read.csv("email_alerts/outputs/invasive_pestslist.csv")) > 0) {
+    read.csv("email_alerts/outputs/invasive_pestslist.csv")
+  },
+
+  if(nrow(read.csv("email_alerts/outputs/rare_specieslist.csv")) > 0) {
+    read.csv("email_alerts/outputs/rare_specieslist.csv")
+  },
+
+  if(nrow(read.csv("email_alerts/outputs/te_specieslist.csv")) > 0) {
+    read.csv("email_alerts/outputs/te_specieslist.csv")
+  }
+)
+
+database <- bind_rows(read.csv("email_alerts/outputs/database_records.csv"),
+                      records) %>%
+  arrange(desc(polygonloc), preserve, observed.on) %>%
+  write.csv(., "email_alerts/outputs/database_records.csv", row.names = F)
 
 
 ## Combine for map
-pestsmap <- read.csv("email_alerts/outputs/invasive_pestslist.csv") %>% 
-  select(scientific.name, common.name, latitude, longitude, url) 
-raremap <- read.csv("email_alerts/outputs/rare_specieslist.csv") %>% 
-  filter(polygonloc == "preserve") %>% 
-  select(scientific.name, common.name, latitude, longitude, url) 
-temap <- read.csv("email_alerts/outputs/te_specieslist.csv") %>% 
-  filter(polygonloc == "preserve") %>% 
-  select(scientific.name, common.name, latitude, longitude, url) 
+pestsmap <- read.csv("email_alerts/outputs/invasive_pestslist.csv") %>%
+  select(scientific.name, common.name, latitude, longitude, url)
+raremap <- read.csv("email_alerts/outputs/rare_specieslist.csv") %>%
+  filter(polygonloc == "preserve") %>%
+  select(scientific.name, common.name, latitude, longitude, url)
+temap <- read.csv("email_alerts/outputs/te_specieslist.csv") %>%
+  filter(polygonloc == "preserve") %>%
+  select(scientific.name, common.name, latitude, longitude, url)
 mapcomb <- rbind(pestsmap, raremap, temap)
 
   
@@ -237,6 +259,7 @@ if (nrow(te) > 0) {
 ```{r buffer-table, results = 'asis', echo = FALSE}
 bufftab <- pests %>%
   filter(polygonloc == "buffer") %>% 
+  filter(common.name != "rugosa rose") %>% 
   select(-c(latitude, longitude, polygonloc))
 
 if (nrow(bufftab) > 0) {
@@ -258,7 +281,26 @@ if (nrow(bufftab) > 0) {
   </div>
 </div>
 
+
+<!-- Download -->
+<div class = "species-box">
+  <div>
+  <h3 class = "boxtitles"> Download Previous Records </h3>
+  </div>
+  <div class = "dlb">
+``` {r echo = FALSE}
+read.csv("email_alerts/outputs/database_records.csv") %>%
+  download_this(
+    output_name = "full_MCHT_watchlist_database",
+    output_extension = ".xlsx",
+    button_label = "Download preserve data",
+    button_type = "success")
+```
+  </div>
 </div>
+
+</div>
+
 
 
 

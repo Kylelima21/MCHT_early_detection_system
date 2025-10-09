@@ -412,6 +412,29 @@ p {
 
 
 
+/* || Download */
+.dlb {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 1rem !important;
+  text-align: center;
+}
+
+.btn {
+  padding: 9px 15px;
+  width: 35rem;
+  font-size: 1.6rem;
+}
+
+.btn-success {
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+.fa-save:before {
+    content: none;
+}
+
 
 
 
