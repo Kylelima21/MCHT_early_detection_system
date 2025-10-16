@@ -23,7 +23,9 @@ smtp_send(render_email('email_alerts/email_material.Rmd'),
                  "adeci@mcht.org",
                  "therrick@mcht.org",
                  "kgentalen@mcht.org",
-                 "emarshall@mcht.org"),
+                 "emarshall@mcht.org",
+                 "tbauer@mcht.org",
+                 "adevine@mcht.org"),
           subject = "Weekly early detection report", 
           credentials = creds_file("email_alerts/kmail")
 )
