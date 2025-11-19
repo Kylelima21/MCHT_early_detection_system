@@ -453,7 +453,7 @@ p {
   margin: 0 6rem 3rem 6rem !important;
   display: grid;
   grid-column-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .footer-box h2 {
@@ -514,6 +514,17 @@ p {
 
 
 
+/* Media query styling */
+
+@media screen and (max-width: 1048px) {
+  
+  .main-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+}
+
 
 @media screen and (max-width: 880px) {
   
@@ -527,12 +538,112 @@ p {
   }
 
   .thebody {
-    padding: 2rem;
+    padding: 10rem 2rem 2rem 2rem;
   }
 
   .map-box, .species-box {
     margin: 1rem;
   }
+  
+  .map-box {
+    margin: 0px 0px 50px 0px !important;
+    padding: 20px 10px 30px;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+  .btn {
+    width: 95%;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+
+  h2 {
+    margin-top: 15px !important;
+  }
 
 }
 
+
+@media screen and (max-width: 600px) {
+  
+  .footer-box {
+    grid-row-gap: 30px;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+      "images"
+      "text"
+  }
+  
+  .footer-content {
+    margin: 0rem 1rem 3rem 1rem !important;
+  }
+  
+  .shrink-table {
+    font-size: 10px;
+  }
+  
+  .cite {
+    top: 25rem;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 520px) {
+  
+  td {
+    padding: 8px 1px !important;
+  }
+  
+  .sorting {
+    padding-right: 0px !important;
+  }
+  
+}
+
+
+@media screen and (max-width: 450px) {
+  
+  .footer-logo {
+    width: 100%;
+  }
+  
+  .title-box {
+    padding: 50px 30px 30px;
+  }
+  
+  .headerp {
+    padding: 40px 0px;
+  }
+  
+  .thebody {
+    padding: 105px 15px;
+  }
+  
+  .species-box {
+    padding: 20px 10px 30px;
+  }
+  
+  .sp-table {
+    padding: 5px;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 375px) {
+  
+  .cite {
+    top: 18rem;
+  }
+  
+}
