@@ -17,7 +17,7 @@ jobs:
           R -e 'install.packages("htmltools")'
           R -e 'install.packages("farver")'
           R -e 'install.packages("blastula")'
-          R -e 'install.packages("tidyverse")'
+          R -e 'install.packages("tidyverse", dependencies = T)'
           R -e 'install.packages("lubridate")'
 
           
