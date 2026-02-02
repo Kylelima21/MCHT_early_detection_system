@@ -14,6 +14,7 @@ jobs:
           
       - name: Install packages
         run: |
+          R -e 'install.packages("htmltools")'
           R -e 'install.packages("blastula")'
           R -e 'install.packages("tidyverse")'
           R -e 'install.packages("lubridate")'
