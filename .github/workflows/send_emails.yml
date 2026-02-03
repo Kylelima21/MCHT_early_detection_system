@@ -1,9 +1,8 @@
 name: Sending Email
 run-name: ${{ github.actor }} is sending the email 🚀
 on:
-    push
-    #schedule:
-        #- cron: '30 12 * * 1'
+    schedule:
+        - cron: '30 12 * * 1'
     
 jobs:
   Run-Email-Sender-Script:
