@@ -1,3 +1,5 @@
 "scientific.name","common.name","observed.on","location","listing.status","latitude","longitude","url","preserve","polygonloc"
-"Fratercula arctica","atlantic puffin",2026-06-26,"Mistake Island, Jonesport, ME, US","state threatened",44.4743533333,-67.5323466667,"https://www.inaturalist.org/observations/375673148","Green Island","buffer"
-"Alca torda","razorbill",2026-06-22,"Hamilton Cove Preserve (MCHT), Lubec","state threatened",44.7889305,-67.0127177,"https://ebird.org/checklist/S361817541","Hamilton Cove Preserve","preserve"
+"Sterna dougallii","roseate tern",2026-07-03,"Whaleboat Island, Harpswell US-ME 43.76103, -70.04842","federally endangered",43.761029,-70.048423,"https://ebird.org/checklist/S366905496","Whaleboat Island","preserve"
+"Sterna paradisaea","arctic tern",2026-07-03,"Whaleboat Island, Harpswell US-ME 43.76103, -70.04842","state threatened",43.761029,-70.048423,"https://ebird.org/checklist/S366905496","Whaleboat Island","preserve"
+"Alca torda","razorbill",2026-07-02,"Boot Head Preserve (MCHT), Lubec","state threatened",44.7753587,-67.0311928,"https://ebird.org/checklist/S366533283","Boot Head Preserve","preserve"
+"Sterna dougallii","roseate tern",2026-07-03,"Whaleboat Island, Harpswell US-ME 43.76103, -70.04842","state endangered",43.761029,-70.048423,"https://ebird.org/checklist/S366905496","Whaleboat Island","preserve"
