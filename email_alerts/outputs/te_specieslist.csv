@@ -1,5 +1,3 @@
 "scientific.name","common.name","observed.on","location","listing.status","latitude","longitude","url","preserve","polygonloc"
-"Sterna dougallii","roseate tern",2026-07-03,"Whaleboat Island, Harpswell US-ME 43.76103, -70.04842","federally endangered",43.761029,-70.048423,"https://ebird.org/checklist/S366905496","Whaleboat Island","preserve"
-"Sterna paradisaea","arctic tern",2026-07-03,"Whaleboat Island, Harpswell US-ME 43.76103, -70.04842","state threatened",43.761029,-70.048423,"https://ebird.org/checklist/S366905496","Whaleboat Island","preserve"
-"Alca torda","razorbill",2026-07-02,"Boot Head Preserve (MCHT), Lubec","state threatened",44.7753587,-67.0311928,"https://ebird.org/checklist/S366533283","Boot Head Preserve","preserve"
-"Sterna dougallii","roseate tern",2026-07-03,"Whaleboat Island, Harpswell US-ME 43.76103, -70.04842","state endangered",43.761029,-70.048423,"https://ebird.org/checklist/S366905496","Whaleboat Island","preserve"
+"Sterna paradisaea","arctic tern",2026-07-11,"Cable Crossing Road, Southwest Harbor","state threatened",44.2564713,-68.2944961,"https://ebird.org/checklist/S370722899","Manset Fields","preserve"
+"Falco peregrinus","peregrine falcon",2026-07-08,"Jordan Pond Path, Mount Desert, ME, US","state endangered",44.3243365475,-68.2546882846,"https://www.inaturalist.org/observations/379831518","Norumbega Mountain Preserve","buffer"
