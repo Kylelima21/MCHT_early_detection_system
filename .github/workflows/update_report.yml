@@ -1,8 +1,9 @@
 name: Updating Early Detection Report
 run-name: ${{ github.actor }} is updating the report!
 on:
-  schedule:
-    - cron:  '0 8 * * 1'
+  push
+  #schedule:
+    #- cron:  '0 8 * * 1'
     
 jobs:
   Update-Citsci-Report-Pages:
@@ -28,6 +29,7 @@ jobs:
           R -e 'install.packages("leaflet")'
           R -e 'install.packages("downloadthis")'
           R -e 'install.packages("DT")'
+          R -e 'install.packages("httr2")'
           
           
       - name: Run rmd to update info
